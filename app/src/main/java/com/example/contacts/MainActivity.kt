@@ -9,17 +9,6 @@ import androidx.core.widget.doAfterTextChanged
 import androidx.recyclerview.widget.RecyclerView
 import java.util.Date
 
-class Contact{
-    lateinit var FirstName:String
-    lateinit var LastName:String
-    lateinit var PhoneNumber:String
-    lateinit var DOB:Date
-}
-
-class DB{
-    lateinit var DBName:String
-}
-
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,17 +17,12 @@ class MainActivity : AppCompatActivity() {
         var SearchText = findViewById<EditText>(R.id.SearchText)
         var ContactList = findViewById<RecyclerView>(R.id.ContactList)
 
-
-        SearchText.doAfterTextChanged {
-
-        }
-
+//        SearchText.doAfterTextChanged {
+//
+//        }
         CreateButton.setOnClickListener{
             val crateContactActivity = Intent(this, CreateContactActivity::class.java)
             startActivity(crateContactActivity)
         }
-
     }
-
-
 }
